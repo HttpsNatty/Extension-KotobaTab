@@ -1,0 +1,110 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a24 0%, #0c0c11 100%);
+}
+
+.newtab-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.brand h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.brand .icon {
+  font-size: 36px;
+  filter: drop-shadow(0 0 12px var(--sakura-glow));
+}
+
+.subtitle {
+  color: var(--sakura-pink);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+.phrase-jp {
+  font-size: 96px;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(255, 122, 168, 0.3);
+}
+
+.phrase-romaji {
+  color: var(--text-romaji);
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.phrase-pt {
+  color: var(--text-secondary);
+  font-size: 24px;
+  margin-bottom: 60px;
+  max-width: 600px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 18px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 122, 168, 0.3);
+}
+
+.btn-large:hover {
+  background: rgba(255, 122, 168, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 122, 168, 0.2);
+}
+
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}

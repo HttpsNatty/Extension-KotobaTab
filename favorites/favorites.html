@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frases Salvas - KotobaTab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/styles.css">
+  <link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+  <div id="sakura-bg" class="sakura-container"></div>
+  
+  <div class="favorites-container">
+    <header class="header">
+      <div class="brand">
+        <span class="icon">🌸</span>
+        <h1>KotobaTab</h1>
+      </div>
+      <h2>Frases Favoritas</h2>
+    </header>
+
+    <main class="content">
+      <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">📂</div>
+        <p>Você ainda não tem nenhuma frase salva.</p>
+        <p class="empty-sub">Clique no ⭐ nas frases do dia para salvá-las aqui!</p>
+      </div>
+      
+      <div id="favorites-list" class="favorites-list">
+        <!-- Rendered via JS -->
+      </div>
+    </main>
+  </div>
+  
+  <footer class="footer fixed-footer"><span data-i18n="developedBy">Desenvolvido por</span> <a href="https://github.com/HttpsNatty" target="_blank" rel="noopener noreferrer">Natty</a></footer>
+
+  <template id="favorite-card-template">
+    <div class="favorite-card">
+      <div class="card-content">
+        <div class="card-jp japanese-text"></div>
+        <div class="card-romaji"></div>
+        <div class="card-pt"></div>
+      </div>
+      <div class="card-actions">
+        <button class="icon-btn btn-listen" title="Ouvir">🔊</button>
+        <button class="icon-btn btn-remove" title="Remover">🗑️</button>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="favorites.js"></script>
+</body>
+</html>

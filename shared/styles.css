@@ -1,0 +1,122 @@
+:root {
+  --bg-color: #0c0c11; 
+  --surface-color: #1a1a24;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-romaji: #ff9bb8;
+  --sakura-pink: #ff7aa8;
+  --sakura-glow: rgba(255, 122, 168, 0.4);
+  --border-radius-lg: 16px;
+  --border-radius-md: 8px;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fall {
+  0% { transform: translate(0, -10vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(15vw, 110vh) rotate(360deg); opacity: 0; }
+}
+
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sakura-petal {
+  position: absolute;
+  top: -10vh;
+  background-color: var(--sakura-pink);
+  border-radius: 100% 0px 100% 0px;
+  box-shadow: 0 0 8px var(--sakura-glow);
+  animation: fall linear infinite;
+  opacity: 0.6;
+}
+
+.japanese-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  background: rgba(26, 26, 36, 0.6);
+  border: 1px solid rgba(255, 122, 168, 0.2);
+  color: var(--text-primary);
+  padding: 10px 16px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+  transition: var(--transition-smooth);
+}
+
+.btn:hover {
+  background: rgba(255, 122, 168, 0.15);
+  border-color: var(--sakura-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--sakura-glow);
+  color: #fff;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 12px;
+    background: #ff69b4;
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+.footer a {
+    color: rgba(255,255,255,0.95);
+    text-decoration: underline;
+    font-weight: 600;
+}
+.footer a:focus {
+    outline: 2px solid rgba(255,255,255,0.2);
+    outline-offset: 2px;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}

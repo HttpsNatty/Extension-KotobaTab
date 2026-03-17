@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KotobaTab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/styles.css">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div id="sakura-bg" class="sakura-container"></div>
+  
+  <div class="newtab-container">
+    <header class="header">
+      <div class="brand">
+        <span class="icon">🌸</span>
+        <h1>KotobaTab</h1>
+      </div>
+      <div class="subtitle">Japanese phrase of the day</div>
+    </header>
+
+    <main class="content" id="phrase-container">
+      <div class="phrase-jp japanese-text" id="text-jp">...</div>
+      <div class="phrase-romaji" id="text-romaji">...</div>
+      <div class="phrase-pt" id="text-pt">...</div>
+      
+      <div class="actions">
+        <button class="btn btn-large" id="btn-listen">
+          <span class="btn-icon">🔊</span>
+          Ouvir pronúncia
+        </button>
+        <button class="btn btn-large" id="btn-favorite">
+          <span class="btn-icon" id="icon-favorite">⭐</span>
+          Salvar frase
+        </button>
+        <button class="btn btn-large" id="btn-favorites-page" title="Ver Frases Salvas">
+          <span class="btn-icon">🔖</span> Favoritos
+        </button>
+      </div>
+    </main>
+  </div>
+  
+  <footer class="footer fixed-footer"><span data-i18n="developedBy">Desenvolvido por</span> <a href="https://github.com/HttpsNatty" target="_blank" rel="noopener noreferrer">Natty</a></footer>
+
+  <script type="module" src="newtab.js"></script>
+</body>
+</html>
